@@ -15,13 +15,12 @@ class SharesController extends Controller
      */
     public function index()
     {
-        $items = Share::all();
+        $items = Share::all(); /* モデル名::all()で全データを取得することができる　**/
         return response()->json([
-            'message' => 'OK',
+            'message' => 'OK', 
             'data' => $items
         ], 200);
     }
-
     /**
      * Store a newly created resource in storage.
      *

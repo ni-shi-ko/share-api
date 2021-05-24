@@ -20,6 +20,7 @@ class LikesController extends Controller
         DB::table('likes')->insert($param);
         return response()->json([
             'message' => 'Like created successfully',
+            'data' => $param
         ], 200);
     }
     public function delete(Request $request)
