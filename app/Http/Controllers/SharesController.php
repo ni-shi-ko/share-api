@@ -50,7 +50,7 @@ class SharesController extends Controller
         $item = Share::where('id', $share->id)->first();
         $like = DB::table('likes')->where('share_id', $share->id)->get();
         $user_id = $item->user_id;
-        $user = DB::table('user')->where('id', (int)$user_id)->first();
+        $user = DB::table('users')->where('id', (int)$user_id)->first();
         $comment = DB::table('comments')->where('share_id', $share->id)->get();
         $comment_data = array();
         if (empty($comment->toArray())) {
@@ -102,7 +102,7 @@ class SharesController extends Controller
         $item = Share::where('id', $share->id)->delete();
         if ($item) {
             return response()->json(
-                ['message' =>'Share delete successfully'],
+                ['message' => 'Share deleted successfully'],
                 200
             );
         } else {

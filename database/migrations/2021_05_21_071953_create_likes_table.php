@@ -19,9 +19,7 @@ class CreateLikesTable extends Migration
             $table->string('user_id');
             $table->timestamps();
         });
-    }
-
-    /**
+    }    /**
      * Reverse the migrations.
      *
      * @return void

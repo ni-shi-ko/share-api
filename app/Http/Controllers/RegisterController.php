@@ -22,9 +22,10 @@ class RegisterController extends Controller
             "updated_at" => $now,
         ];
         DB::table('users')->insert($param);
-        return response() ->json([
+        return response()->json([
             'message' => 'User created successfully',
             'data' => $param
         ], 200);
     }
+
 }

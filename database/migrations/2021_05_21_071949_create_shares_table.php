@@ -20,7 +20,6 @@ class CreateSharesTable extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
