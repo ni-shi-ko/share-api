@@ -29,5 +29,5 @@ class LikesController extends Controller
         return response()->json([
             'message' => 'Like deleted successfully',
         ], 200);
-    } 
+    }
 }
